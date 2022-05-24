@@ -1,12 +1,12 @@
-function secondSum() {
-  const input = document.getElementById('second_input').value;
-  const output = document.getElementById('second_output');
-  const input_int = parseInt(input);
-  if (input_int !== NaN) {
-    output.innerHTML = 'Total: ' + sum(input_int);
+function reqTwo() {
+  const input = document.getElementById('req2Input').value;
+  const outputElement = document.getElementById('req2Output');
+  // make sure input is a number...we can convert it from the string we get from the input value to a number with parseInt.  If this fails it's not a number
+  const inputInt = parseInt(input);
+  if (inputInt !== NaN) {
+    outputElement.innerHTML = 'total: ' + sum(inputInt);
   }
 }
-
 function sum(number) {
   let total = 0;
   for (let i = 1; i <= number; i++) {
